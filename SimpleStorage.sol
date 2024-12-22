@@ -7,7 +7,7 @@ contract SimpleStorage
 {
 
     bool hasFavoriteNumber = true;  
-    uint256 favoriteNumber = 88; // Set to 0 if not assigned
+    uint256 favoriteNumber; // Set to 0 if not assigned
     int256 favoriteNegativeNumber = -88; 
     string favoriteString = "88"; 
     address favoriteAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; 
