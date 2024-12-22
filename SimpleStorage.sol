@@ -12,11 +12,21 @@ contract SimpleStorage
     string favoriteString = "88"; 
     address favoriteAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; 
 
-        // Visibility : public (can be accessed from outside the contract), private (can only be accessed from within the contract)
-        // internal (can only be accessed from within the contract and contracts deriving from it), external (can only be accessed from outside the contract)
-    function store(uint256 _favoriteNewNumber) public
+        // Visibility : public, private, internal, external
+
+    function store(uint256 _favoriteNewNumber) public  /// Public means it can be accessed from outside the contract and it changes the state of the contract
     {
         favoriteNumber = _favoriteNewNumber;
+    }
+        
+    function retrieve () public view returns (uint256) /// View means it doesn't change the state of the contract
+    {
+        return favoriteNumber;  
+    }
+
+    function nothing () public pure returns (string memory) /// Pure means it doesn't read or write to the state of the contract
+    {
+        return "Hello World";
     }
 
 }
