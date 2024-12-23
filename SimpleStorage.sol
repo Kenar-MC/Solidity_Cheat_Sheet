@@ -12,6 +12,14 @@ contract SimpleStorage
     string favoriteString = "88"; 
     address favoriteAddress = 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4; 
 
+    uint256[] favoriteArray = [1,2,3,4,5]; 
+
+    struck Person
+    {
+        uint256 favoriteNumber;
+        string name;    
+    }
+
         // Visibility : public, private, internal, external
 
     function store(uint256 _favoriteNewNumber) public  /// Public means it can be accessed from outside the contract and it changes the state of the contract
