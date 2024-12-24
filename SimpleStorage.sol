@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+// Ethereum , Polygon , Arbitrum , Optimism , Zksync
+
 pragma solidity ^0.8.18; // Version
 
 
@@ -29,13 +31,25 @@ contract SimpleStorage
     Person[2] public listOfPeople2;                                      // Static array
 
 
+
+    mapping(string => uint256) public nameToFavoriteNumber;             // Mapping
+
+
         function addPerson(uint256 _favoriteNumber, string memory _name) public
         {
             listOfPeople.push(Person(_favoriteNumber, _name)); 
+            nameToFavoriteNumber[_name] = _favoriteNumber;          // Mapping name to favorite number and default value is 0
         }
 
 
         // Visibility : public, private, internal, external
+
+        // calldata : Read only data location that contains function arguments
+
+        // memory : Data location that contains function arguments, local variables, and return parameters
+
+        // storage : Data location that contains state variables and automatically when declare outside of functions
+
 
         function store(uint256 _favoriteNewNumber) public  /// Public means it can be accessed from outside the contract and it changes the state of the contract
         {
