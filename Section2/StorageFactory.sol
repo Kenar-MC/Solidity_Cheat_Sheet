@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
-import {SimpleStorage,SimpleStorage} from "./SimpleStorage.sol";
+import {SimpleStorage,SimpleStorage2} from "./SimpleStorage.sol";
 
 
 contract MyContract 
 {
 
-    SimpleStorage public simpleStorageContract;
+    SimpleStorage[] public listOfSsaimpleStorageContract;
 
     function CreateContract() public 
     {
