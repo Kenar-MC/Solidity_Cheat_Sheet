@@ -7,11 +7,12 @@ import {SimpleStorage,SimpleStorage2} from "./SimpleStorage.sol";
 contract MyContract 
 {
 
-    SimpleStorage[] public listOfSsaimpleStorageContract;
+    SimpleStorage[] public listOfSimpleStorageContract;
 
     function CreateContract() public 
     {
-        simpleStorageContract = new SimpleStorage();
+        SimpleStorage newlistOfSimpleStorageContract = new SimpleStorage();
+        listOfSimpleStorageContract.push(newlistOfSimpleStorageContract);
     }
 
 
