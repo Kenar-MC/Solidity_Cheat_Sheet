@@ -6,7 +6,7 @@
 
 
     module.exports = {
-        solidity: "0.8.2",
+        solidity: "0.8.28",
         networks: {
           mainnet: {
             url: `https://api.avax.network/ext/bc/C/rpc`,
